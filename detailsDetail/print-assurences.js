@@ -1,5 +1,6 @@
 import deleteAssurences from "./deleteAssurences.js";
 import editAssurence from "./editAssurences.js";
+import deleteAll from "./deleteAll.js";
 export default function printAssurences (id){
     id = window.location.search.split("=")[1];
     axios.get(`http://localhost:8000/api/assurances/`,
@@ -31,9 +32,11 @@ export default function printAssurences (id){
     table += `</tbody>
     </table>`;
     assurences.innerHTML = table;
-   
+   const asID=data._id;
+    console.log(asID);
     deleteAssurences();
     editAssurence();
+    deleteAll();
     
     }
     )
