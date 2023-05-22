@@ -17,24 +17,28 @@ if (id) {
         const client=res.data;
         console.log(client);
 
-const clientInfo = document.getElementById("clientInfo");
+const clientInfo = document.getElementById("clientDiv");
 
-clientInfo.innerHTML=` <ul class="ul ul-expand-md">
+clientInfo.innerHTML=`  <div class="col-2">
+<img src="klient.png" alt="klient fotografie" class="img-fluid">
+</div>
+<div id="clientInfo" class="col-3"> <ul class="ul ul-expand-md">
 <dt>${client.firstName} ${client.lastName}</dt>
 
 <dd>${client.streetNumber}</dd>
 <dd>${client.city}</dd>
 <dd>${client.posteNumber}</dd>
 </ul>
+</div>
+<div id="nextInfo" class="col-6">
 
-`
 
 
-const nextInfo = document.getElementById("nextInfo");
-nextInfo.innerHTML = `<ul>
+<ul>
 <dd>${client.email}</dd>
 <dd>${client.phone}</dd>
 </ul>
+</div>
 `   
     
 
