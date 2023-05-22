@@ -57,7 +57,7 @@ axios.get(`http://localhost:8000/api/clients/`)
                     btn.addEventListener("click", (e) => {
                     const id = e.target.parentElement.parentElement.id;
                     console.log(id);
-                    window.location.href = `http://127.0.0.1:5500/edit-client.html?=${id}`;
+                    window.location.href = `http://127.0.0.1:5500/form-edit.html?=${id}`;
 
                     });
                 });

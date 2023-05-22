@@ -49,8 +49,7 @@ form.addEventListener('submit', (e) => {
 
             .then( () => window.location.href=`http://127.0.0.1:5500/client-detail.html?=${id}`)
            
-           
-           
-            .catch((err) =>
-            console.log(err));
+           .then (()=> new Error('Something went badly wrong!') )         
+            .catch((Error) =>
+            console.log(Error));
       });

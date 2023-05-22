@@ -1,6 +1,9 @@
 import creatAssurences from "./creat-assurences.js";
 import printAssurences from "./print-assurences.js";
 // import deleteAssurences from "./deleteAssurences.js";
+import deleteAll from "./deleteAll.js";
+
+// import deleteAssurences from "./deleteAssurences.js";
 
 
 
@@ -51,6 +54,7 @@ detailClient();
 creatAssurences();
 // deleteAssurences();
 printAssurences();
+deleteAll();
 
 
 // const postBtn = document.getElementById("btnPost");
