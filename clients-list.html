@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="./node_modules/axios/dist/axios.min.js"></script> 
+  
+    <title>Pojištěnci</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a class="navbar-brand mr-1rem" href="#">
+               <h2>PojištěníAPP</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conted-navbar" aria-controls="conted-navbar" aria-expanded="false" aria-label="open-burgermenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="conted-navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="">Pojištěnci</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" >
+                            Pojištění
+                        </a>
+                        
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Události</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">O aplikaci</a>
+                    </li>
+                </ul>
+               
+            </div>
+        </nav>  
+    </header>
+   <a href="" value="" type="hidden"></a>
+    <h3 class="m-3">Pojištěnci</h3>
+    <div class="d-flex flex-column justify-content-center align-items-center ">
+    <a href="edit-client.html" type="button" class=" m-3 btn btn-primary text-white"> Nový pojištěnec</a>
+
+
+      <table id="table" class="table-sm w-75 table-response table table-hover table-bordered">
+<!--         
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Jméno</th>
+                <th scope="col">Bydliště</th>
+                <th scope="col"></th>
+
+              </tr>
+            </thead>
+            <tbody id="tbody" class="w-auto"> -->
+              <!-- <tr >
+                <a href="#"><td data-label="Jméno a příjmeni">Pepa Novák</td></a>
+                <td data-label="Bydliště">789567354</td>
+                <td data-label="button"><button type="button" class="mr-2 btn btn-danger">Odstranit</button><button type="button" class="  btn btn-warning">Editovat</button></td>
+              </tr>
+              <tr>
+                <a href="#"><td data-label="Jméno a příjmeni">Pepa Novák</td></a>
+                <td data-label="Bydliště">789567354</td>
+                <td data-label="button"><button type="button" class="mr-2 btn btn-danger">Odstranit</button><button type="button" class=" btn btn-warning">Editovat</button></td>
+              </tr>
+              <tr>
+                <a href="#"><td data-label="Jméno a příjmeni">Pepa Novák</td></a>
+                <td data-label="Bydliště">789567354</td>
+                <td data-label="button"><button type="button" class="mr-2 btn btn-danger">Odstranit</button><button type="button" class=" btn btn-warning">Editovat</button></td>
+              </tr> -->
+             
+            <!-- </tbody> -->
+          
+            
+          </table>
+          <nav aria-label="Stránkování">
+            <ul class="pagination">
+                <li class="page-item disabled">
+                    <span aria-hidden="true" class="page-link">&laquo;</span>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+       
+        </div>
+   
+       
+        <script src="client-list.js"></script>
+        
+</body>
+
+</html>

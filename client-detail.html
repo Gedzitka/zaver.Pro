@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="./node_modules/axios/dist/axios.min.js"></script> 
+    
+    
+    
+    <title>Detail pojištěnce</title>
+</head>
+
+<body>
+    <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand mr-1rem" href="#">
+           <h2>PojištěníAPP</h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conted-navbar" aria-controls="conted-navbar" aria-expanded="false" aria-label="open-burgermenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="conted-navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Pojištěnci</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" >
+                        Pojištění
+                    </a>
+                    
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pojistenci.html">Události</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">O aplikaci</a>
+                </li>
+            </ul>
+           
+        </div>
+    </nav>  
+</header>
+<div class="w-100 d-flex justify-content-center align-items-center flex-column">
+<div class=" w-75 d-flex justify-content-center align-items-center flex-column ">
+    <div class="row mt-5 w-100">
+        <div class="col-2">
+            <img src="klient.png" alt="klient fotografie" class="img-fluid">
+        </div>
+        <div id="clientInfo" class="col-3">
+    
+        <!-- <ul class="ul ul-expand-md">
+            <dt>Pepa Novák</dt>
+            <dd>Růžová 28</dd>
+            <dd>Praha 1</dd>
+            <dd>1000</dd>
+            
+
+        </ul> -->
+        </div>
+        <div id="nextInfo" class="col-6">
+            <!-- <ul>
+            <dd>pepa.n@seznam.cz</dd>
+            <dd>777888999</dd>
+            
+        </ul> -->
+        </div>
+        
+    </div>
+
+<table id="table" class=" mt-5 table-sm w-100 table-response table table-hover table-bordered">
+<!-- <thead class="">
+    <tr>
+      <th scope="col">Částka</th>
+      <th scope="col">Pojištění</th>
+      <th scope="col"></th>
+
+    </tr>
+  </thead> -->
+  <tbody id="tbody" class="w-auto">
+    <!-- <tr >
+      <a href="#"><td data-label="Jméno a příjmeni">Pepa Novák</td></a>
+      <td data-label="telefon">789567354</td>
+      <td data-label="button"><button type="button" class="mr-2 btn btn-danger">Odstranit</button><button type="button" class="  btn btn-warning">Editovat</button></td>
+    </tr> -->
+   
+   
+  </tbody>
+</table>
+<div class="d-flex justify-content-center align-items-center">
+<button id="btnPost" type="button" class="mr-2 btn btn-primary">Přidat pojištění</button><button type="button" class="mr-2 btn btn-danger">Odstranit pojištěnce</button><button type="button" class="  btn btn-warning">Editovat pojištěnce</button>
+</div>
+</div>
+</div>
+<script type="module" src="detailsDetail/client-detail.js"></script>
+</body>
+</html>
