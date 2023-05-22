@@ -54,7 +54,7 @@ detailClient();
 creatAssurences();
 // deleteAssurences();
 printAssurences();
-deleteAll();
+// deleteAll();
 
 
 // const postBtn = document.getElementById("btnPost");

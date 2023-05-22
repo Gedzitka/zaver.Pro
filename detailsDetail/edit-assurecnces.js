@@ -45,45 +45,26 @@ axios.get(`http://localhost:8000/api/clients/${id}`)
 //             console.log(err));
 //       });
     
-editAssurecnces=()=>{
+const editAssurances = () => {
+    const id = window.location.search.split('=')[1];
 
-
- const id = window.location.search.split('=')[1];
-    
-    axios.get(`http://localhost:8000/api/assurances/`)
-    .then((res) => {
-
-        const resData = res.data;
-        const data=resData.find((item)=>item.clientID===id)
+    axios.get(`http://localhost:8000/api/assurances/${id}`)
+      .then((res) => {
+        // const data = res.data.find((item) => item.clientID === id);
+        const data = res.data;
         console.log(data);
-       
-
-
+  
+        document.getElementById('assurence-type').value = data.assurenceType;
+        document.getElementById('clientID').value = data.clientID;
+        document.getElementById('price').value = data.price;
+        document.getElementById('valid-from').value = data.validFrom;
+        document.getElementById('subject-asurance').value = data.subjectOfinsurance;
+        document.getElementById('valid-to').value = data.validTo;
+      })
+      .catch((err) => console.log(err));
+  };
     
-        // const resData = res.data;
-    
-      
-        
-        
-       
-        document.getElementById('assurence-type').value=data.assurenceType;
-        document.getElementById('clientID').value=data.clientID;
-        document.getElementById('price').value=data.price;
-        document.getElementById('valid-from').value=data.validFrom;
-        document.getElementById('subject-asurance').value=data.subjectOfinsurance;
-        document.getElementById('valid-to').value=data.validTo;
-        
-      
-        
-
-
-    })
-
-    .catch((err) =>
-    console.log(err));
-
-    
-
+editAssurances();
 
 
 
@@ -103,7 +84,7 @@ form.addEventListener('submit', (e) => {
      const dataEteries = JSON.stringify(Object.fromEntries(dataForm))
      console.log(dataEteries);
 
-    ;
+   const id = window.location.search.split('=')[1];
      
     axios({
         method: "put",
@@ -114,22 +95,42 @@ form.addEventListener('submit', (e) => {
     }
     
     )
-        .then((res) => 
-            console.log(res + "pojištění přidáno"))
-            
+        .then((res) => {
+            const data = res.data;
+console.log(data);
+
+            console.log(res + "pojištění upraveno")
+
+
+
+
+
+       
+
             
 
-            .then( () => window.location.href=`http://127.0.0.1:5500/client-detail.html?=${id}`)
-           
-           
-           
-            .catch((err) =>
-            console.log(err));
-      });
 
+        
+           
+           
+           
+           
+        }
+        
+        )
+        .then( () => window.location.href=`http://127.0.0.1:5500/client-detail.html?=${data.clientID}`)
+        
+
+
+        .catch((err) =>
+        console.log(err));
     }
-}
-editAssurecnces();
+    
+    )}
+
+    
+
+
 putAssurences()
       
 
