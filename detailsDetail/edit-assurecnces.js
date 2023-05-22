@@ -74,6 +74,9 @@ editAssurances();
     putAssurences=()=>{
  
         const form = document.getElementById('form')
+        const imputName=document.getElementById('clientID')
+        imputName.value=id
+    console.log(imputName.value);
 
 console.log(form);
 form.addEventListener('submit', (e) => {
@@ -97,29 +100,17 @@ form.addEventListener('submit', (e) => {
     )
         .then((res) => {
             const data = res.data;
-console.log(data);
-
-            console.log(res + "pojištění upraveno")
-
-
-
-
-
-       
-
-            
-
-
-        
-           
-           
+            console.log(data + "pojištění upraveno")
+            console.log(data.clientID);
+      
+            window.location.href=`http://127.0.0.1:5500/client-detail.html?=${data.clientID}`
            
            
         }
         
         )
-        .then( () => window.location.href=`http://127.0.0.1:5500/client-detail.html?=${data.clientID}`)
-        
+ 
+      
 
 
         .catch((err) =>
