@@ -1,7 +1,7 @@
 import creatAssurences from "./creat-assurences.js";
 import printAssurences from "./print-assurences.js";
 // import deleteAssurences from "./deleteAssurences.js";
-import deleteAll from "./deleteAll.js";
+import editClient from "./edit-client.js";
 
 // import deleteAssurences from "./deleteAssurences.js";
 
@@ -58,6 +58,7 @@ detailClient();
 creatAssurences();
 // deleteAssurences();
 printAssurences();
+editClient();
 // deleteAll();
 
 
